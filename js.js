@@ -16,7 +16,7 @@ $(document).ready(function() {
       $("#3").hasClass(a) && $("#6").hasClass(a) && $("#9").hasClass(a)) {
       $(".field").unbind();
       $(".text h2").html(a + " Wins!");
-      $(".text").show();
+      $(".text").css("opacity", "1");
       return true;
     } else {
       return false;
@@ -34,7 +34,7 @@ $(document).ready(function() {
       if (tie === 9) {
         $(".field").unbind();
         $(".text h2").html("It's a Tie!");
-        $(".text").show();
+        $(".text").css("opacity", "1");
       }
     } else {
       checkWin("cross");
@@ -47,7 +47,7 @@ $(document).ready(function() {
     $(".field").removeClass("cross circle");
     $(".field").css("background", "#fff");
     $(".field").css("opacity", "1");
-    $(".text").hide();
+    $(".text").css("opacity", "0");
     $(".field").unbind();
   }
   /* pc random ai -> before moving check if atleast 1 div is empty || the game is not over */

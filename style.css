@@ -1,35 +1,23 @@
 body{
-
 background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+width: 100%;
 height: 100%;
+background-attachment: fixed;
+}
+
+*{
+  transition: 0.4s;
+  margin: 0;
+  padding: 0;
+}
 
 
-}
-.wrapper{
-  width: 700px;
-  height: auto;
-  margin: 0 auto;
-}
-h1{
-  font-family: 'Nanum Pen Script', cursive;
-  text-align: center;
-  color:white;
-  font-size: 6em;
-}
-.row{
-  margin: 0 auto;
-  width:50%;
-  height:50%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 .block{
   display:flex;
   justify-content: center;
 }
 .field{
-margin: 5px;
+  margin: 5px;
   height:100px;
   width: 100px;
   background:#fff;
@@ -37,33 +25,14 @@ margin: 5px;
   border-radius: 10px;
   box-shadow:0 0 20px rgba(0, 0, 0, 0.4);
 }
-.rival{
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  height: auto;
-  margin: 0 auto;
-}
-.rival img{
-  width:170px;
-  height: auto;
-}
-.rick img{
-  width: 200px;
-}
 .fa-circle-o {
   margin-top:19px;
-  color: #2ecc71;
+  color: #00ba41;
 }
 
 .fa-times {
   margin-top:17px;
-  color: #e74c3c;
-}
-.hello{
-  font-family: 'Nanum Pen Script', cursive;
-  color: white;
-  font-size: 2em;
+  color: #fc049d;
 }
 .btn {
   font-family: 'Nanum Pen Script', cursive;
@@ -72,32 +41,127 @@ margin: 5px;
   font-size: 2em;
   font-weight: bold;
   margin: 5px;
-  border-radius: 9px;
   letter-spacing: 2px;
-  border: 2px solid rgba(0,0,0,0);
 }
-
 .btn:hover, .btn:focus, .btn:active {
-  border: 2px solid white;
+  transform: scale(1.3);
   color: #ecf0f1;
   cursor: pointer;
   border-radius: 20px;
 }
 .text{
-  position:fixed;
-  top:15%;
   margin:0 auto;
-  left:0;right:0;
-  width:300px;
   text-align:center;
-  cursor:default;
 }
 h2{
-  color:#2c3e50;
-  font-size:84px;
+  color:rgb(239, 251, 95);
+  font-size:50px;
+  font-family: 'Nanum Pen Script', cursive;
+
+}
+.choose img{
+  width:170px;
+  height: auto;
+}
+
+@media (min-width:768px) {
+h1{
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  color:white;
+  font-size: 6em;
+}
+.wrapper{
+  width: 998px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.row{
+  display: flex;
+  align-items: center;
+}
+.game-field{
+  width:50%;
+  height:50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rick img{
+  width: 200px;
+}
+.hello{
+  font-family: 'Nanum Pen Script', cursive;
+  color: white;
+  font-size: 2.5em;
 }
 .buttons{
   text-align:center;
-  width: 12em;
+  width: 40em;
+  display: flex;
+  justify-content: space-between;
+}
+
+}
+@media (max-width:767px) {
+
+.wrapper{
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  color:white;
+  font-size: 4em;
+}
+.rick img{
+  width: 150px;
+}
+.welcome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hello{
+  font-family: 'Nanum Pen Script', cursive;
+  color: white;
+  font-size: 2em;
+}
+.buttons{
+  text-align:center;
+  display: flex;
+  justify-content: center;
+}
+.choose img{
+  width:100px;
+  height: auto;
+}
+.btn {
+  font-family: 'Nanum Pen Script', cursive;
+  /* background: #672d78; */
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px;
+  letter-spacing: 2px;
+}
 }
