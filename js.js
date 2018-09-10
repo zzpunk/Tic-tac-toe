@@ -158,28 +158,27 @@ $(document).ready(function() {
           checkWin("circle");
           checkTie();
           smarterMonkey2();
-        } else if($("#9").hasClass("cross") && $("#1").is(":empty") && ($("#2").hasClass("cross") || $("#4").hasClass("cross"))){
+        } else if ($("#9").hasClass("cross") && $("#1").is(":empty") && ($("#2").hasClass("cross") || $("#4").hasClass("cross"))) {
           $(O).appendTo($("#1"));
           $("#1").addClass("circle");
           checkWin("circle");
           checkTie();
           smarterMonkey2();
+        } else {
+          if ($("#3").is(":empty") && ($("#4").is(":empty") || $("#8").is(":empty"))) {
+            $(O).appendTo($("#3"));
+            $("#3").addClass("circle");
+            checkWin("circle");
+            checkTie();
+            smarterMonkey2();
+          } else { /* else it doens't play second turn if pc is first */
+            $(O).appendTo($("#7"));
+            $("#7").addClass("circle");
+            checkWin("circle");
+            checkTie();
+            smarterMonkey2();
+          }
         }
-        else {
-      if ($("#3").is(":empty") && ($("#4").is(":empty") || $("#8").is(":empty"))) {
-        $(O).appendTo($("#3"));
-        $("#3").addClass("circle");
-        checkWin("circle");
-        checkTie();
-        smarterMonkey2();
-      } else { /* else it doens't play second turn if pc is first */
-        $(O).appendTo($("#7"));
-        $("#7").addClass("circle");
-        checkWin("circle");
-        checkTie();
-        smarterMonkey2();
-      }
-    }
       }
     } else if ($('.circle').length == 0 && $("#5").hasClass("cross") && $("#1").is(":empty")) {
       $(O).appendTo($("#1"));
@@ -187,15 +186,14 @@ $(document).ready(function() {
       checkWin("circle");
       checkTie();
       smarterMonkey2();
-    } else if($("circle").length == 1 && $("cross").length == 1){
-      if(("#1").is(":empty")){
+    } else if ($("circle").length == 1 && $("cross").length == 1) {
+      if (("#1").is(":empty")) {
         $(O).appendTo($("#1"));
         $("#1").addClass("circle");
         checkWin("circle");
         checkTie();
         smarterMonkey2();
-      }
-      else{
+      } else {
         $(O).appendTo($("#7"));
         $("#7").addClass("circle");
         checkWin("circle");
