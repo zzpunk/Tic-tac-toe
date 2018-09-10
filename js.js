@@ -15,7 +15,6 @@ $(document).ready(function() {
       $("#2").hasClass(a) && $("#5").hasClass(a) && $("#8").hasClass(a) ||
       $("#3").hasClass(a) && $("#6").hasClass(a) && $("#9").hasClass(a)) {
       $(".field").unbind();
-      $(".field").css("opacity", "0.6");
       $(".text h2").html(a + " Wins!");
       $(".text").show();
       return true;
@@ -34,7 +33,6 @@ $(document).ready(function() {
       }
       if (tie === 9) {
         $(".field").unbind();
-        $(".field").css("opacity", "0.6");
         $(".text h2").html("It's a Tie!");
         $(".text").show();
       }
