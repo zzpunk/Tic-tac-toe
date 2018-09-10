@@ -94,6 +94,7 @@ h1{
   display: flex;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .rick img{
@@ -145,6 +146,9 @@ h1{
   font-family: 'Nanum Pen Script', cursive;
   color: white;
   font-size: 2em;
+}
+.game-field{
+  margin-bottom: 15px;
 }
 .buttons{
   text-align:center;
